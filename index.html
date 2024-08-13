@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine BNE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#hero"><img src="img/logo/logo w-Photoroom.png" alt="Vending Machine BNE Logo"></a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="#hero" data-text="nav.home"></a></li>
+                <li><a href="#services" data-text="nav.services"></a></li>
+                <li><a href="#about" data-text="nav.about"></a></li>
+                <li><a href="#contact" data-text="nav.contact"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="fullpage-section">
+            <div class="hero-content">
+                <p class="welcome-text" data-text="hero.welcome">Welcome to</p>
+                <h1 class="hero-title" data-text="hero.title"></h1>
+                <p class="hero-subtitle" data-text="hero.description"></p>
+            </div>
+            <div class="scroll-down">
+                <a href="#services">
+                    <i class="fas fa-chevron-down"></i>
+                    <span data-text="hero.cta"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="services" class="fullpage-section">
+            <div class="content-box services-container">
+                <div class="services-left">
+                    <h2 data-text="services.title"></h2>
+                    <img src="img/2.webp" alt="Services Image" class="services-image">
+                </div>
+                <div class="services-right" id="serviceList"></div>
+            </div>
+        </section>
+
+        <section id="about" class="fullpage-section">
+            <div class="content-box">
+                <h2 data-text="about.title"></h2>
+                <div class="about-content">
+                    <div id="aboutText" class="about-text"></div>
+                    <div class="about-image">
+                        <img src="img/header.webp" alt="Vending Machine BNE Team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fullpage-section">
+            <div class="content-box">
+                <h2 data-text="contact.title"></h2>
+                <div class="contact-content">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-text="contact.form.name"></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-text="contact.form.email"></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-text="contact.form.message"></label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" data-text="contact.form.submit"></button>
+                    </form>
+                    <div class="contact-info">
+                        <h3 data-text="contact.info.title"></h3>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-text="contact.info.address"></span></p>
+                        <p><i class="fas fa-phone"></i> <span data-text="contact.info.phone"></span></p>
+                        <p><i class="fas fa-envelope"></i> <span data-text="contact.info.email"></span></p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vending Machine BNE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="languageSelector" class="language-selector">
+        <button id="languageButton" class="language-button">Language</button>
+        <ul id="languageList" class="language-list">
+            <li><button class="lang-btn" data-lang="en">English</button></li>
+            <li><button class="lang-btn" data-lang="es">Español</button></li>
+            <li><button class="lang-btn" data-lang="cn">中文</button></li>
+        </ul>
+    </div>
+
+    <script src="messages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
