@@ -521,7 +521,7 @@ main {
   flex: 1;
 }
 
-#contact-form button[type="submit"] {
+#contactForm button[type="submit"] {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: var(--satin-sheen-gold);
@@ -535,7 +535,7 @@ main {
   font-size: 1rem;
 }
 
-#contact-form button[type="submit"]:hover {
+#contactForm button[type="submit"]:hover {
   background-color: #c19b2f;
 }
 
@@ -724,6 +724,10 @@ footer {
   .about-content,
   .contact-content {
     flex-direction: column;
+  }
+
+  .reviews-container {
+    grid-template-columns: auto;
   }
 
   nav ul {

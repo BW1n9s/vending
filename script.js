@@ -176,18 +176,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form validation
-    const form = document.getElementById('contact-form');
+    // const form = document.getElementById('contact-form');
     
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // if (form) {
+    //     form.addEventListener('submit', function(e) {
+    //         e.preventDefault();
             
-            if (validateForm()) {
-                alert('Form submitted successfully!');
-                form.reset();
-            }
-        });
-    }
+    //         if (validateForm()) {
+    //             alert('Form submitted successfully!');
+    //             form.reset();
+    //         }
+    //     });
+    // }
 
     function validateForm() {
         let isValid = true;
@@ -304,6 +304,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        fetch('https://8zykodf8zh.execute-api.us-east-1.amazonaws.com/formTest', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message === 'Email sent successfully') {
+                alert('Email sent successfully');
+              } else {
+                alert('Failed to send email: ' + data.message);
+              }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
 
 
     // Initialize
